@@ -511,6 +511,11 @@ body.active { overflow: hidden; }
   scroll-snap-align: start;
 }
 
+.slider{
+  display: flex;
+  justify-content: center;
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /*Card-i i dyte i filmave (Top Rated Movies)*/
 
