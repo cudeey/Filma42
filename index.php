@@ -21,7 +21,7 @@
     <div class="container">
       <div class="overlay" data-overlay></div>
 
-      <a href="./index.html" class="logo">
+      <a href="./index.php" class="logo">
         <img src="./assets/images/logo.svg" alt="Filmlane logo" />
       </a>
 
@@ -30,7 +30,7 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <a href="login-signup.html"><button class="btn btn-primary">Sign in</button></a>
+        <a href="login-signup.php"><button class="btn btn-primary">Sign in</button></a>
       </div>
 
       <button class="menu-open-btn" data-menu-open-btn>
@@ -39,7 +39,7 @@
 
       <nav class="navbar" data-navbar>
         <div class="navbar-top">
-          <a href="./index.html" class="logo">
+          <a href="./index.php" class="logo">
             <img src="./assets/images/logo.svg" alt="Filmlane logo" />
           </a>
 
@@ -50,7 +50,7 @@
 
         <ul class="navbar-list">
           <li>
-            <a href="./index.html" class="navbar-link">Home</a>
+            <a href="./index.php" class="navbar-link">Home</a>
           </li>
 
           <li>
@@ -138,13 +138,13 @@
           <div class="slider">
             <div class="movies-lists">
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="" id="movie-image">
                   </figure>
                 </a>
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title" id="description">The Northman</h3>
                   </a>
                   <time datetime="2022">2022</time>
@@ -199,14 +199,14 @@
           <ul class="movies-list">
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-1.png" alt="Sonic the Hedgehog 2 movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Sonic the Hedgehog 2</h3>
                   </a>
 
@@ -233,14 +233,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-2.png" alt="Morbius movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Morbius</h3>
                   </a>
 
@@ -267,14 +267,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-3.png" alt="The Adam Project movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">The Adam Project</h3>
                   </a>
 
@@ -301,14 +301,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-4.png" alt="Free Guy movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Free Guy</h3>
                   </a>
 
@@ -335,14 +335,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-5.png" alt="The Batman movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">The Batman</h3>
                   </a>
 
@@ -369,14 +369,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-6.png" alt="Uncharted movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Uncharted</h3>
                   </a>
 
@@ -403,14 +403,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-7.png" alt="Death on the Nile movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Death on the Nile</h3>
                   </a>
 
@@ -437,14 +437,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/movie-8.png" alt="The King's Man movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">The King's Man</h3>
                   </a>
 
@@ -485,14 +485,14 @@
           <ul class="movies-list">
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-1.png" alt="Moon Knight movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Moon Knight</h3>
                   </a>
 
@@ -519,14 +519,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-2.png" alt="Halo movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Halo</h3>
                   </a>
 
@@ -553,14 +553,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-3.png" alt="Vikings: Valhalla movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Vikings: Valhalla</h3>
                   </a>
 
@@ -587,14 +587,14 @@
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-4.png" alt="Money Heist movie poster" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Money Heist</h3>
                   </a>
 
@@ -628,13 +628,13 @@
         <div class="footer-top">
           <div class="container">
             <div class="footer-brand-wrapper">
-              <a href="./index.html" class="logo">
+              <a href="./index.php" class="logo">
                 <img src="./assets/images/logo.svg" alt="Filmlane logo" />
               </a>
 
               <ul class="footer-list">
                 <li>
-                  <a href="./index.html" class="footer-link">Home</a>
+                  <a href="./index.php" class="footer-link">Home</a>
                 </li>
 
                 <li>
@@ -657,11 +657,11 @@
             <div class="quicklink-wrapper">
               <ul class="quicklink-list">
                 <li>
-                  <a href="#" class="quicklink-link">Faq</a>
+                  <a href="faq.php" class="quicklink-link">Faq</a>
                 </li>
 
                 <li>
-                  <a href="#" class="quicklink-link">Help center</a>
+                  <a href="contactus.php" class="quicklink-link">Help center</a>
                 </li>
 
                 <li>
@@ -709,7 +709,7 @@
         <ion-icon name="chevron-up"></ion-icon>
       </a>
 
-      <script src="./assets/js/script.js"></script>
+      <script src="assets/js/script.js"></script>
       <script src="assets/js/slider.js"></script>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -20,7 +20,7 @@
       <div class="container">
         <div class="overlay" data-overlay></div>
 
-        <a href="./index.html" class="logo">
+        <a href="./index.php" class="logo">
           <img src="./assets/images/logo.svg" alt="Filmlane logo" />
         </a>
       </div>
@@ -60,7 +60,7 @@
       </div>
     </main>
 
-    <script src="./assets/js/loginform.js"></script>
+    <script src="assets/js/loginform.js"></script>
 
   </body>
 </html>

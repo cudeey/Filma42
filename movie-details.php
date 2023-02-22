@@ -16,91 +16,91 @@
 
 <body id="#top">
 
-<!-- Header -->
+  <!-- Header -->
 
-<header class="header" data-header>
-  <div class="container">
-    <div class="overlay" data-overlay></div>
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
 
-    <a href="./index.html" class="logo">
-      <img src="./assets/images/logo.svg" alt="Filmlane logo" />
-    </a>
+      <a href="./index.php" class="logo">
+        <img src="./assets/images/logo.svg" alt="Filmlane logo" />
+      </a>
 
-    <div class="header-actions">
-      <button class="search-btn">
-        <ion-icon name="search-outline"></ion-icon>
-      </button>
-
-      <a href="login-signup.html"><button class="btn btn-primary">Sign in</button></a>
-    </div>
-
-    <button class="menu-open-btn" data-menu-open-btn>
-      <ion-icon name="reorder-two"></ion-icon>
-    </button>
-
-    <nav class="navbar" data-navbar>
-      <div class="navbar-top">
-        <a href="./index.html" class="logo">
-          <img src="./assets/images/logo.svg" alt="Filmlane logo" />
-        </a>
-
-        <button class="menu-close-btn" data-menu-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
+      <div class="header-actions">
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
         </button>
+
+        <a href="login-signup.php"><button class="btn btn-primary">Sign in</button></a>
       </div>
 
-      <ul class="navbar-list">
-        <li>
-          <a href="./index.html" class="navbar-link">Home</a>
-        </li>
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
 
-        <li>
-          <a href="#" class="navbar-link">Movie</a>
-        </li>
-
-        <li>
-          <a href="#" class="navbar-link">Tv Show</a>
-        </li>
-
-        <li>
-          <a href="#" class="navbar-link">Web Series</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-social-list">
-        <li>
-          <a href="#" class="navbar-social-link">
-            <ion-icon name="logo-twitter"></ion-icon>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="./index.php" class="logo">
+            <img src="./assets/images/logo.svg" alt="Filmlane logo" />
           </a>
-        </li>
 
-        <li>
-          <a href="#" class="navbar-social-link">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-        </li>
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
 
-        <li>
-          <a href="#" class="navbar-social-link">
-            <ion-icon name="logo-pinterest"></ion-icon>
-          </a>
-        </li>
+        <ul class="navbar-list">
+          <li>
+            <a href="./index.php" class="navbar-link">Home</a>
+          </li>
 
-        <li>
-          <a href="#" class="navbar-social-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
+          <li>
+            <a href="#" class="navbar-link">Movie</a>
+          </li>
 
-        <li>
-          <a href="#" class="navbar-social-link">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+          <li>
+            <a href="#" class="navbar-link">Tv Show</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Web Series</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-social-list">
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <article>
@@ -223,14 +223,14 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-1.png" alt="Moon Knight movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Moon Knight</h3>
                   </a>
 
@@ -259,14 +259,14 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-2.png" alt="Halo movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Halo</h3>
                   </a>
 
@@ -295,14 +295,14 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-3.png" alt="Vikings: Valhalla movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Vikings: Valhalla</h3>
                   </a>
 
@@ -331,14 +331,14 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="./movie-details.php">
                   <figure class="card-banner">
                     <img src="./assets/images/series-4.png" alt="Money Heist movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="./movie-details.php">
                     <h3 class="card-title">Money Heist</h3>
                   </a>
 
@@ -382,13 +382,13 @@
     <div class="footer-top">
       <div class="container">
         <div class="footer-brand-wrapper">
-          <a href="./index.html" class="logo">
+          <a href="./index.php" class="logo">
             <img src="./assets/images/logo.svg" alt="Filmlane logo" />
           </a>
 
           <ul class="footer-list">
             <li>
-              <a href="./index.html" class="footer-link">Home</a>
+              <a href="./index.php" class="footer-link">Home</a>
             </li>
 
             <li>
@@ -411,11 +411,11 @@
         <div class="quicklink-wrapper">
           <ul class="quicklink-list">
             <li>
-              <a href="#" class="quicklink-link">Faq</a>
+              <a href="faq.php" class="quicklink-link">Faq</a>
             </li>
 
             <li>
-              <a href="#" class="quicklink-link">Help center</a>
+              <a href="contactus.php" class="quicklink-link">Help center</a>
             </li>
 
             <li>
@@ -457,20 +457,15 @@
     </div>
   </footer>
 
-    <!--GO TO TOP-->
+  <!--GO TO TOP-->
 
-    <a href="#top" class="go-top" data-go-top>
-      <ion-icon name="chevron-up"></ion-icon>
-    </a>
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
 
-    <script src="./assets/js/script.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <script src="assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
