@@ -28,7 +28,7 @@
                     <ion-icon name="search-outline"></ion-icon>
                 </button>
 
-                <a href="login-signup.php"><button class="btn btn-primary">Sign in</button></a>
+                <a href="login.php"><button class="btn btn-primary">Sign in</button></a>
             </div>
 
             <button class="menu-open-btn" data-menu-open-btn>
