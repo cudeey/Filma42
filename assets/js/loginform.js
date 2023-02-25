@@ -1,28 +1,3 @@
-/*
- * login/signup form
- */
-function toggleSignup() {
-    document.getElementById("login-toggle").style.backgroundColor =
-      "hsl(216, 22%, 18%)";
-    document.getElementById("login-toggle").style.color = "#fff";
-    document.getElementById("signup-toggle").style.backgroundColor =
-      "hsl(192, 97%, 45%)";
-    document.getElementById("signup-toggle").style.color = "#fff";
-    document.getElementById("login-form").style.display = "none";
-    document.getElementById("signup-form").style.display = "block";
-  }
-  
-  function toggleLogin() {
-    document.getElementById("login-toggle").style.backgroundColor =
-      "hsl(192, 97%, 45%)";
-    document.getElementById("login-toggle").style.color = "#fff";
-    document.getElementById("signup-toggle").style.backgroundColor =
-      "hsl(216, 22%, 18%)";
-    document.getElementById("signup-toggle").style.color = "#fff";
-    document.getElementById("signup-form").style.display = "none";
-    document.getElementById("login-form").style.display = "block";
-  }
-  
   /*
    * validimi
    */
@@ -62,10 +37,6 @@ function toggleSignup() {
     if(password.search(/[0-9]/) < 0) {
       alert("Your password must contain at least one digit.");
       return false;
-    }
-    else{
-      alert("Your account has been created successfully!");
-      return true;
     }
   }
   
