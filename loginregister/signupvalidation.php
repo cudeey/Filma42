@@ -37,7 +37,9 @@ if(! $stmt->prepare($insert)){
 $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $passwordhash);
 
 if($stmt->execute()){
-    echo
-    "<script language='javascript'> alert('Sign Up Successful!')</script>";
+    echo "<script language='javascript'>";
+    echo "alert('Sign Up Successful!');";
+    echo "window.location.href = '../login.php';";
+    echo "</script>";
 }
 ?>
