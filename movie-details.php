@@ -134,7 +134,7 @@ if (isset($_SESSION["user_id"])) {
 
           <figure class="movie-detail-banner">
             <?php
-            require_once 'database/connection.php';
+            require_once 'contentdatabase/connection.php';
             if (isset($_GET['ID'])) {
               $ID = mysqli_real_escape_string($mysqli, $_GET['ID']);
 
@@ -238,7 +238,7 @@ if (isset($_SESSION["user_id"])) {
             <li>
             <div class="movie-card">
                 <?php
-                require_once 'database/connection.php';
+                require_once 'contentdatabase/connection.php';
 
                 $moviesql = "SELECT * FROM movies WHERE id = 9";
                 $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
@@ -279,7 +279,7 @@ if (isset($_SESSION["user_id"])) {
             <li>
             <div class="movie-card">
                 <?php
-                require_once 'database/connection.php';
+                require_once 'contentdatabase/connection.php';
 
                 $moviesql = "SELECT * FROM movies WHERE id = 10";
                 $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
@@ -320,7 +320,7 @@ if (isset($_SESSION["user_id"])) {
             <li>
             <div class="movie-card">
                 <?php
-                require_once 'database/connection.php';
+                require_once 'contentdatabase/connection.php';
 
                 $moviesql = "SELECT * FROM movies WHERE id = 11";
                 $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
@@ -361,7 +361,7 @@ if (isset($_SESSION["user_id"])) {
             <li>
             <div class="movie-card">
                 <?php
-                require_once 'database/connection.php';
+                require_once 'contentdatabase/connection.php';
 
                 $moviesql = "SELECT * FROM movies WHERE id = 12";
                 $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
