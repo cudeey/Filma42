@@ -130,26 +130,26 @@ if (isset($_SESSION["user_id"])) {
                 <div id="fcf-form">
                     <h3 class="fcf-h3">Contact us</h3>
 
-                    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                    <form action="contactdatabase/savecontactform.php" id="fcf-form-id" class="fcf-form-class" method="post">
 
                         <div class="fcf-form-group">
                             <label for="Name" class="fcf-label">Your name</label>
                             <div class="fcf-input-group">
-                                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                                <input type="text" id="Name" name="name" class="fcf-form-control" required>
                             </div>
                         </div>
 
                         <div class="fcf-form-group">
                             <label for="Email" class="fcf-label">Your email address</label>
                             <div class="fcf-input-group">
-                                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                                <input type="email" id="Email" name="email" class="fcf-form-control" required>
                             </div>
                         </div>
 
                         <div class="fcf-form-group">
                             <label for="Message" class="fcf-label">Your message</label>
                             <div class="fcf-input-group">
-                                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                                <textarea id="Message" name="message" class="fcf-form-control" required></textarea>
                             </div>
                         </div>
 
@@ -250,9 +250,5 @@ if (isset($_SESSION["user_id"])) {
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
-<?php
-
-?>
 
 </html>
