@@ -1,16 +1,17 @@
-<?php 
+<?php
 
 session_start();
 
-if(isset($_SESSION["user_id"])){
+if (isset($_SESSION["user_id"])) {
 
-  $mysqli = require __DIR__."/loginregister/connection.php";
+  $mysqli = require __DIR__ . "/loginregister/connection.php";
 
   $sql = "SELECT * FROM userinfo WHERE id = {$_SESSION["user_id"]}";
 
   $result = $mysqli->query($sql);
 
   $user = $result->fetch_assoc();
+
 }
 
 ?>
@@ -47,10 +48,10 @@ if(isset($_SESSION["user_id"])){
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <?php if(isset($user)): ?>
-          <p>Hello, <?= htmlspecialchars($user["username"])?>.</p> <a href="loginregister/logout.php"><button class="btn btn-primary">Log out</button></a>
-        <?php else: ?>
-        <a href="login.php"><button class="btn btn-primary">Sign in</button></a>
+        <?php if (isset($user)) : ?>
+          <p>Hello, <?= htmlspecialchars($user["username"]) ?>.</p> <a href="loginregister/logout.php"><button class="btn btn-primary">Log out</button></a>
+        <?php else : ?>
+          <a href="login.php"><button class="btn btn-primary">Sign in</button></a>
         <?php endif; ?>
       </div>
 
@@ -159,13 +160,13 @@ if(isset($_SESSION["user_id"])){
           <div class="slider">
             <div class="movies-lists">
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <a>
                   <figure class="card-banner">
                     <img src="" id="movie-image">
                   </figure>
                 </a>
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
+                  <a>
                     <h3 class="card-title" id="description">The Northman</h3>
                   </a>
                   <time datetime="2022">2022</time>
@@ -220,33 +221,40 @@ if(isset($_SESSION["user_id"])){
           <ul class="movies-list">
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 1";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-1.png" alt="Sonic the Hedgehog 2 movie poster" />
+                    <img src="./assets/images/<?php echo $row['img']; ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Sonic the Hedgehog 2</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT122M">122 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>7.8</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -254,33 +262,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 2";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-2.png" alt="Morbius movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Morbius</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">HD</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT104M">104 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>5.9</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -288,33 +303,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 3";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-3.png" alt="The Adam Project movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
                   <a href="./movie-details.php">
-                    <h3 class="card-title">The Adam Project</h3>
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">4K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT106M">106 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>7.0</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -322,33 +344,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 4";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-4.png" alt="Free Guy movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Free Guy</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2021">2021</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">4K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT115M">115 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>7.7</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -356,33 +385,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 5";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-5.png" alt="The Batman movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">The Batman</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">4K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT176M">176 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>7.9</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -390,33 +426,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 6";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-6.png" alt="Uncharted movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Uncharted</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">HD</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT116M">116 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>7.0</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -424,33 +467,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 7";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-7.png" alt="Death on the Nile movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Death on the Nile</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT127M">127 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>6.5</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -458,33 +508,40 @@ if(isset($_SESSION["user_id"])){
 
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 8";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/movie-8.png" alt="The King's Man movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">The King's Man</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2021">2021</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">HD</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT131M">131 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>7.0</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
@@ -501,140 +558,168 @@ if(isset($_SESSION["user_id"])){
         <div class="container">
           <p class="section-subtitle">Best TV Series</p>
 
-          <h2 class="h2 section-title">World Best TV Series</h2>
+          <h2 class="h2 section-title">Most Watched TV Series</h2>
 
           <ul class="movies-list">
             <li>
               <div class="movie-card">
-                <a href="./movie-details.php">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 9";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-1.png" alt="Moon Knight movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Moon Knight</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT47M">47 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.6</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
             </li>
 
             <li>
-              <div class="movie-card">
-                <a href="./movie-details.php">
+            <div class="movie-card">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 10";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-2.png" alt="Halo movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Halo</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT59M">59 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.8</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
             </li>
 
             <li>
-              <div class="movie-card">
-                <a href="./movie-details.php">
+            <div class="movie-card">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 11";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-3.png" alt="Vikings: Valhalla movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Vikings: Valhalla</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT51M">51 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.3</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
             </li>
 
             <li>
-              <div class="movie-card">
-                <a href="./movie-details.php">
+            <div class="movie-card">
+                <?php
+                require_once 'database/connection.php';
+
+                $moviesql = "SELECT * FROM movies WHERE id = 12";
+                $movieresult = mysqli_query($mysqli, $moviesql) or die("Bad Query: $moviesql");
+                $row = mysqli_fetch_array($movieresult);
+                ?>
+                <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-4.png" alt="Money Heist movie poster" />
+                    <img src="./assets/images/<?php echo $row['img'] ?>" />
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.php">
-                    <h3 class="card-title">Money Heist</h3>
+                  <a href="<?php echo "./movie-details.php?ID={$row['id']}" ?>">
+                    <h3 class="card-title"><?php echo $row['title']; ?></h3>
                   </a>
 
-                  <time datetime="2017">2017</time>
+                  <time datetime=""><?php echo $row['year']; ?></time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">4K</div>
+                  <div class="badge badge-outline"><?php echo $row['resolution']; ?></div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT70M">70 min</time>
+                    <time datetime=""><?php echo $row['length']; ?></time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.3</data>
+                    <data><?php echo $row['rating']; ?></data>
                   </div>
                 </div>
               </div>
