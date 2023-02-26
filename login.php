@@ -9,13 +9,28 @@
     $result = $mysqli->query($select);
     $user = $result->fetch_assoc();
 
-    if($user){
-      if(password_verify($_POST["password"], $user["password"])){
+    $adminselect = sprintf("SELECT * FROM userinfo WHERE id = '1'");
+
+    $adminresult = $mysqli->query($adminselect);
+    $admin = $adminresult->fetch_assoc();
+
+    if($admin){
+      if(password_verify($_POST["password"], $admin["password"])){
         session_start();
 
-        $_SESSION["user_id"] = $user["id"];
-        header("Location: index.php");
+        $_SESSION["user_id"] = $admin["id"];
+        header("Location: adminpage.php");
         exit;
+      }
+    }else{
+      if($user){
+        if(password_verify($_POST["password"], $user["password"])){
+          session_start();
+
+          $_SESSION["user_id"] = $user["id"];
+          header("Location: index.php");
+          exit;
+        }
       }
     }
 
