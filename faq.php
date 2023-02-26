@@ -1,3 +1,21 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION["user_id"])) {
+
+    $mysqli = require __DIR__ . "/loginregister/connection.php";
+
+    $sql = "SELECT * FROM userinfo WHERE id = {$_SESSION["user_id"]}";
+
+    $result = $mysqli->query($sql);
+
+    $user = $result->fetch_assoc();
+
+    print_r($_SESSION);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +46,11 @@
                     <ion-icon name="search-outline"></ion-icon>
                 </button>
 
-                <a href="login.php"><button class="btn btn-primary">Sign in</button></a>
+                <?php if (isset($user)) : ?>
+                    <p>Hello, <?= htmlspecialchars($user["username"]) ?>.</p> <a href="loginregister/logout.php"><button class="btn btn-primary">Log out</button></a>
+                <?php else : ?>
+                    <a href="login.php"><button class="btn btn-primary">Sign in</button></a>
+                <?php endif; ?>
             </div>
 
             <button class="menu-open-btn" data-menu-open-btn>
